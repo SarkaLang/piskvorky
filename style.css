@@ -63,6 +63,7 @@ li {
 .buttom-blue {
  background-color: #0090e9;
  padding: 4%;
+ border-top: solid black 1px;
 }
 
 a {
