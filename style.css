@@ -2,7 +2,7 @@
 
 body {
  background: linear-gradient(#615dad,#ffc8da);
- font-family::'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+ font-family:'Times New Roman', Times, serif;
 }
 
 .container { 
@@ -18,6 +18,10 @@ body {
   width: 24vw;
   height: auto;
   align-items: center;
+}
+
+img {
+  border-radius: 10px 10px 0  0;
 }
 
 /*Description*/
@@ -44,15 +48,10 @@ p {
 }
 
 /*Buttoms*/
-
-ul {
-  margin: 0;
-  padding: 0;
-}
-
-li {
+.container-buttom {
+  display: flex;
+  flex-direction: column;
   text-align: center;
-  list-style-type: none;
 }
 
 .buttom-green {
