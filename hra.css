@@ -1,0 +1,109 @@
+:after, :before { box-sizing: border-box; }
+
+body {
+ background: linear-gradient(#615dad,#ffc8da) no-repeat;
+ font-family:'Times New Roman', Times, serif;
+ font-size: 1.4rem;
+ display: flex;
+ justify-content: center;
+ min-height: 100vh;
+}
+
+/* Kontejner main*/
+.container-main {
+  display: flex;
+  flex-direction: column;
+}
+
+h1 {
+  font-family: 'Lobster';
+  font-size: 3rem;
+  color: white;
+  text-align: center;
+  margin: 0;
+  margin-top: 7%;
+}
+
+
+/* Kontejner ikonky a tlačíka*/
+.container-buttons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2%;
+}
+
+.container-circle {
+  flex-basis: 25%;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+}
+
+.play {
+  margin-right: 5%;
+}
+
+p{
+  color: white;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.container-svg {
+  flex-basis: 25%;
+  display: flex;
+  justify-content: end;
+}
+
+.circle {
+  border-radius: 50%;
+  min-height: 10px;
+  min-width: 10px;
+  border: 3px solid rgb(204, 204, 223);
+}
+
+.home {
+  margin-right: 5%;
+  padding: 5%;
+  background-color: #1fcca4;
+  border-radius: 5%;
+}
+
+.restart {
+  background-color: #0090e9;
+  border-radius: 5%;
+  padding: 5%;
+}
+
+.home:hover {
+  background-color:#1cbb96;
+}
+
+.restart:hover {
+  background-color: #0197f6;
+}
+
+/* Kontejner hra piškorky*/
+
+.container-game {
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  border: 1px solid black;
+  width: 80vmin;
+  height: 80vmin;
+} 
+
+.one {
+  border: solid black 1px;
+  opacity: 0.4;
+}
+
+button:hover {
+ cursor: pointer;
+ opacity: 0.7;
+}
+
+
+
+
+
