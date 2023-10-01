@@ -103,6 +103,17 @@ button:hover {
  opacity: 0.7;
 }
 
+.one--noughts {
+  background-image: url(images/circle.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.one--crosses {
+  background-image: url(images/cross.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
 
 
 
