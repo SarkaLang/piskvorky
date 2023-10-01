@@ -1,16 +1,20 @@
 let currentPlayer = 'noughts';
+const changePlayer = document.querySelector('.image')
 
 const gamerClick = (event) => {
   if ( currentPlayer === 'noughts') {
     event.target.classList.add('one--noughts');
+    changePlayer.src = 'images/circle.svg'
     event.target.disabled = true;
     return (currentPlayer = 'crosses');
   } else if  (currentPlayer === 'crosses') {
     event.target.classList.add('one--crosses');
+    changePlayer.src = 'images/cross.svg'
     event.target.disabled = true;
     return (currentPlayer = 'noughts')
   }
 }
+
 
 document.querySelector('#jedna').addEventListener('click', gamerClick )
 document.querySelector('#dva').addEventListener('click', gamerClick )
@@ -35,4 +39,5 @@ const restartButton = (event) => {
 
 } 
 document.querySelector('.restart').addEventListener('click', restartButton)
+
 

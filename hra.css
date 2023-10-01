@@ -44,6 +44,10 @@ h1 {
   margin-right: 5%;
 }
 
+.circle {
+  width: 50%;
+}
+
 p{
   color: white;
   font-family: 'Times New Roman', Times, serif;
