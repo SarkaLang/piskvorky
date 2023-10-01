@@ -35,3 +35,4 @@ const restartButton = (event) => {
 
 } 
 document.querySelector('.restart').addEventListener('click', restartButton)
+
