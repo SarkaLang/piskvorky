@@ -25,10 +25,10 @@ document.querySelector('#deset').addEventListener('click', gamerClick)
 
 
 const restartButton = (event) => {
- confirm('Opravdu chceš začít znovu?');
+ const alert = confirm('Opravdu chceš začít znovu?');
  
- if ('OK') {
-   return true
+ if (alert === true) {
+   return 
  } else {
   event.preventDefault()
  }
