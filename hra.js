@@ -4,12 +4,12 @@ const changePlayer = document.querySelector('.image')
 const gamerClick = (event) => {
   if ( currentPlayer === 'noughts') {
     event.target.classList.add('one--noughts');
-    changePlayer.src = 'images/circle.svg'
+    changePlayer.src = 'images/cross.svg'
     event.target.disabled = true;
     currentPlayer = 'crosses';
   } else {
     event.target.classList.add('one--crosses');
-    changePlayer.src = 'images/cross.svg'
+    changePlayer.src = 'images/circle.svg'
     event.target.disabled = true;
     currentPlayer = 'noughts';
   }
