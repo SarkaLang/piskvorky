@@ -6,15 +6,14 @@ const gamerClick = (event) => {
     event.target.classList.add('one--noughts');
     changePlayer.src = 'images/circle.svg'
     event.target.disabled = true;
-    return (currentPlayer = 'crosses');
-  } else if  (currentPlayer === 'crosses') {
+    currentPlayer = 'crosses';
+  } else {
     event.target.classList.add('one--crosses');
     changePlayer.src = 'images/cross.svg'
     event.target.disabled = true;
-    return (currentPlayer = 'noughts')
+    currentPlayer = 'noughts';
   }
 }
-
 
 document.querySelector('#jedna').addEventListener('click', gamerClick )
 document.querySelector('#dva').addEventListener('click', gamerClick )

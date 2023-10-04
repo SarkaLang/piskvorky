@@ -44,10 +44,6 @@ h1 {
   margin-right: 5%;
 }
 
-.circle {
-  width: 50%;
-}
-
 p{
   color: white;
   font-family: 'Times New Roman', Times, serif;
@@ -105,7 +101,8 @@ button:hover {
   background-repeat: no-repeat;
   background-position: center;
   animation: ease-in;
-  transition: 0.1s;
+  animation-name: size;
+  animation-duration: 0.15s;
   opacity: 2;
 }
 
@@ -113,9 +110,19 @@ button:hover {
   background-image: url(images/cross.svg);
   background-repeat: no-repeat;
   background-position: center;
-  animation: ease-in;
-  transition: 0.1s;
+  animation-name: size;
+  animation-duration: 0.15s;
   opacity: 2;
+}
+
+@keyframes size {
+
+  from {
+    background-size: 0%;
+  }
+  to {
+    background-size: 65%;
+  }
 }
 
 
