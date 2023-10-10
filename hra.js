@@ -16,39 +16,41 @@ const gamerClick = (event) => {
     event.target.disabled = true;
     currentPlayer = 'noughts';
   }
-}
 
 const newButton = Array.from(buttonElement)
 
 const newField = newButton.map((newButton) => {
-  if (newButton.classList.contains('one-noughts')) {
-    return 'x';
-  } else  if (newButton.classList.contains('one-crosses')){
+  if (newButton.classList.contains('one--noughts')) {
     return 'o';
+  } else  if (newButton.classList.contains('one--crosses')){
+    return 'x';
   } 
     return '_';
 })
+
+console.log(newButton)
 
 const winner = findWinner(newField) 
 
 if (winner === 'o') {
   setTimeout(() => {
 	alert('Vyhrál hráč se symbolem kolečko')
-  location.reload()
-  }, 2000)
+ 
+  }, 1000)
   }
   if (winner === 'x') {
     setTimeout(() => {
     alert('Vyhrál hráč se symbolem křížek')
-    location.reload()
-    }, 2000)
+    
+    }, 1000)
   }
     if (winner === 'tie') {
       setTimeout(() => {
       alert('Hra skončila remízou')
-      location.reload()
-      }, 2000)
+      
+      }, 1000)
     }
+  }
 
   buttonElement.forEach((button) => {
    button.addEventListener('click', gamerClick )
