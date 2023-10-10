@@ -1,5 +1,8 @@
+import { findWinner } from 'https://unpkg.com/piskvorky@0.1.4'
+
 let currentPlayer = 'noughts';
 const changePlayer = document.querySelector('.image')
+const buttonElement = document.querySelectorAll('button')
 
 const gamerClick = (event) => {
   if ( currentPlayer === 'noughts') {
@@ -15,28 +18,53 @@ const gamerClick = (event) => {
   }
 }
 
-document.querySelector('#jedna').addEventListener('click', gamerClick )
-document.querySelector('#dva').addEventListener('click', gamerClick )
-document.querySelector('#tri').addEventListener('click', gamerClick)
-document.querySelector('#ctyri').addEventListener('click', gamerClick)
-document.querySelector('#pet').addEventListener('click', gamerClick)
-document.querySelector('#sest').addEventListener('click', gamerClick)
-document.querySelector('#sedm').addEventListener('click', gamerClick)
-document.querySelector('#osm').addEventListener('click', gamerClick)
-document.querySelector('#devet').addEventListener('click', gamerClick)
-document.querySelector('#deset').addEventListener('click', gamerClick)
+const newButton = Array.from(buttonElement)
 
+const newField = newButton.map((newButton) => {
+  if (newButton.classList.contains('one-noughts')) {
+    return 'x';
+  } else  if (newButton.classList.contains('one-crosses')){
+    return 'o';
+  } 
+    return '_';
+})
+
+const winner = findWinner(newField) 
+
+if (winner === 'o') {
+  setTimeout(() => {
+	alert('Vyhrál hráč se symbolem kolečko')
+  location.reload()
+  }, 2000)
+  }
+  if (winner === 'x') {
+    setTimeout(() => {
+    alert('Vyhrál hráč se symbolem křížek')
+    location.reload()
+    }, 2000)
+  }
+    if (winner === 'tie') {
+      setTimeout(() => {
+      alert('Hra skončila remízou')
+      location.reload()
+      }, 2000)
+    }
+
+  buttonElement.forEach((button) => {
+   button.addEventListener('click', gamerClick )
+   })   
 
 const restartButton = (event) => {
- const alert = confirm('Opravdu chceš začít znovu?');
+  const alert = confirm('Opravdu chceš začít znovu?');
+  
+  if (alert === true) {
+    return 
+  } else {
+   event.preventDefault()
+  }
  
- if (alert === true) {
-   return 
- } else {
-  event.preventDefault()
- }
+ } 
 
-} 
-document.querySelector('.restart').addEventListener('click', restartButton)
+ document.querySelector('.restart').addEventListener('click', restartButton)
 
 
