@@ -104,6 +104,8 @@ button:hover {
   animation-name: size;
   animation-duration: 0.15s;
   opacity: 2;
+  background-color: var(--tab-color);
+  box-shadow: 0 1rem 1rem rgba(O,O,O, 2)
 }
 
 .one--crosses {

@@ -36,19 +36,19 @@ if (winner === 'o') {
   setTimeout(() => {
 	alert('Vyhrál hráč se symbolem kolečko')
  
-  }, 1000)
+  }, 300)
   }
   if (winner === 'x') {
     setTimeout(() => {
     alert('Vyhrál hráč se symbolem křížek')
     
-    }, 1000)
+    }, 300)
   }
     if (winner === 'tie') {
       setTimeout(() => {
       alert('Hra skončila remízou')
       
-      }, 1000)
+      }, 300)
     }
   }
 
