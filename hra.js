@@ -17,9 +17,7 @@ const gamerClick = (event) => {
     currentPlayer = 'noughts';
   }
 
-const newButton = Array.from(buttonElement)
-
-const newField = newButton.map((newButton) => {
+const newField = Array.from(buttonElement).map((newButton) => {
   if (newButton.classList.contains('one--noughts')) {
     return 'o';
   } else  if (newButton.classList.contains('one--crosses')){
@@ -28,29 +26,26 @@ const newField = newButton.map((newButton) => {
     return '_';
 })
 
-console.log(newButton)
-
 const winner = findWinner(newField) 
+const alertMessage = (message) => {
+  setTimeout(() => {
+    alert(message)
+    window.location.reload()
+  }, 300)
+}
 
 if (winner === 'o') {
-  setTimeout(() => {
-	alert('Vyhrál hráč se symbolem kolečko')
- 
-  }, 300)
-  }
+  alertMessage('Vyhrál hráč se symbolem kolečko')
+ }
+  
   if (winner === 'x') {
-    setTimeout(() => {
-    alert('Vyhrál hráč se symbolem křížek')
-    
-    }, 300)
+    alertMessage('Vyhrál hráč se symbolem křížek')
   }
-    if (winner === 'tie') {
-      setTimeout(() => {
-      alert('Hra skončila remízou')
-      
-      }, 300)
-    }
+
+ if (winner === 'tie') {
+   alertMessage('Hra skončila remízou')
   }
+}
 
   buttonElement.forEach((button) => {
    button.addEventListener('click', gamerClick )
@@ -58,13 +53,11 @@ if (winner === 'o') {
 
 const restartButton = (event) => {
   const alert = confirm('Opravdu chceš začít znovu?');
-  
-  if (alert === true) {
+  if (alert) {
     return 
   } else {
    event.preventDefault()
   }
- 
  } 
 
  document.querySelector('.restart').addEventListener('click', restartButton)
